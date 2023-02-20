@@ -14,23 +14,26 @@ The dataset provided were train, test, stores, oil, transaction, sample_submissi
 ## Hypothesis and Questions
 ---
 Three (3) hypothesis were stated for the regression analysis.
-1
+
+**One**
+---
 **H0** - The type of day does not play a significant role in determining the demand for oil
 
 **H1** - the type of day play a significant roles in determining the demand for oil
 
-2
+**Two**
+---
 **H0** - The location does not have an impact for the for the demand for oil
 
 **H1** - The location have an impact for the demand for oil
 
-3
+**Three**
+---
 **H0** - There is no significant correlation between oil price and increase sales
 
 **H1** - There is significant correlation between oil price and increase sales
 
-
-Questions
+**Questions**
 ---
 1. Is the train dataset complete (has all the required dates)?
 2. Which dates have the lowest and highest sales for each year?
