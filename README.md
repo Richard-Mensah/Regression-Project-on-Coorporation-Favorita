@@ -143,6 +143,16 @@ For the date to aid in getting extratable features from the analysis, it was rev
 2. *In comparing monthly sales, July received the highest sales* **followed by January, February and December**
 3. *Also, in dividing the year by quarter sales, the second quarter of the year received the highest sales respectively*.
 
+- **What is the difference between RMSLE, RMSE, MSE (or why is the MAE greater than all of them?)**
+
+- RMSLE, RMSE, MSE, and MAE measure the difference between predicted and actual values.
+- MAE was used to measure the average absolute difference between predicted and actual values, making it easier to interpret than other metrics.
+- MSE was employed for an average squared difference between predicted and actual values, sensitive to outliers and larger errors.
+- RMSE was calculated by taking the square root of the mean squared difference between predicted and actual values.
+- RMSLE was calculated by taking the square root of the mean squared logarithmic difference between predicted and actual values.
+
+MAE calculates the average absolute difference between predicted and actual values, which can be greater than all other metrics. When errors are large or the target variable has a wide range of values, the MAE may be greater than other metrics.
+
 -  **What is the relationship between oil prices and sales?**
 
 A scatter plot was created to visualize the relationship between oil prices against the sales columns to better the total sales made despite the amount of the price sold
@@ -175,7 +185,7 @@ Comparison Table of Evaluation Results:
 -      3      Random Forest  0.44  0.66   0.21
 
 ## 😍 Summary 
-Lastly, in building machine learning model to forecast future sales of corporation favorita products, the encoded data was visualized with a subplot revealed that many quantities of dcoilwtico were sold between 2016 and 2017 across all cities in Ecuador.
+Lastly, in building machine learning model to forecast future sales of corporation favorita products, the encoded data was visualized with a subplot revealed that many quantities of dcoilwtico were sold between 2016 and 2017 across all cities in Ecuador. Regression is a critical statistical strategy used in time-series analysis and modeling. It aids in forecasting future trends, identifying patterns, and assessing the impact of past events on current data. The most common regression techniques used in time-series analysis are linear regression, ARIMA, and exponential smoothing. Understanding the advantages of using regression in time-series analysis allows data scientists to make more informed decisions and improve their data analysis techniques.
 
 ## 💻💻 Medium Article
 https://medium.com/@richmensah1997/time-series-regression-analysis-on-corporation-favorita-sales-prediction-using-machine-learning-c55d56f5e51a
