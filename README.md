@@ -45,6 +45,146 @@ Three (3) hypothesis were stated for the regression analysis.
 8. What is the relationship between product and sales?
 9. What is the trend of sales overtime ?
 10. What is the relationship between oil prices and promotion ?
- 
 
- 
+## 👋 Overview
+-- 
+Introduction
+The predicting grocery sales were to forecast product sales for Corporacion Favorita, an Ecuadorean Grocery shop with hundreds of stores and over thousands of unique products.
+
+As part of the project, the following processes were followed
+- Initial data import, cleanup, and overview
+- Exploratory Data Analysis - This provided more insight to uncover the need for more data cleaning
+- Model Development (I performed data processing, built models, chose algorithms, chose best-performing model, etc)
+- Model evaluation and comparison
+
+## 😌 Data Import, Clean-up, and Exploratory Data Analysis (EDA)
+
+The following libraries were imported to aid EID, analysis, and machine learning models.
+
+## Library for EDA
+- import pandas as pd
+- import numpy as np 
+- import seaborn as sns
+- %matplotlib inline
+- import matplotlib.pyplot as plt
+- import matplotlib.dates as mdates
+- from sklearn.impute import SimpleImputer
+- from pandas_profiling import ProfileReport
+- import warnings
+warnings.filterwarnings('ignore')
+- Data Import and Business Understanding
+
+To perform an excellent analysis, a thorough business understanding was prerequisite. As a result, I loaded the datasets (train, test, transaction, oil, stores, holidays_events, and sample_submission). The train and test datasets were used in the analysis whiles the other datasets aid the EDA in answering most of the project questions where required.
+
+## 😌 Train Data CSV
+--
+The train data csv contained the following, time series of features from 2013/01/01 to 2017/08/15. Also, the following columns were found, store_nbr, family, target sales, and on_promotion respectively.
+- The store_nbr indicated the store at which the products were sold.
+- The On promotion column was the total number of items promoted at a store at a given date period.
+- The target sales gave the total sales for a product class at a particular store at a given date.
+- The family column identified the type of product sold.
+
+##  😌Overview of the transaction, oil, stores, holidays_events, and sample_submission datasets
+
+**💻Transaction csv**
+
+There were three(3) columns in the transition csv. These are date, store number, and transactions
+
+**💻Oil csv**
+
+The oil csv were contained in it the date and dcoilwtico columns
+
+**💻Stores csv**
+
+The stores csv also had store number, city, state, type, and cluster as its columns
+
+**💻Holiday_events csv**
+
+This dataset had the following columns, data, type of event, locale, locale name, description and transferred.
+
+**💻Sample_Submission csv**
+
+The sample_submission had only two columns, thus, the Id and sales columns.
+
+## ✌️ Checking columns and rows of each dataset
+During the EDA it was found that each of the dataset had the following shape
+- sample_submission csv had 28512 rows and 2 columns
+- stores csv had 54 rows and 5 columns
+- transaction csv had 83488 and 3 columns
+oil csv had 1218 rows and 2 columns
+- train csv had 30000888 rows and 6 columns
+ - Lastly, test csv had 28512 rows and 5 columns
+
+ ## Data Visualisations
+ **Barplot**
+
+A barplot was created with a seaborn library to 'transaction' against 'city' column to understand which city had more purchasing power. The barplot revealed that Quito had the highest purchasing power followed by the consumers of Cayambe. The other five followed cities that recorded high transactions are Ambato, Loja, Daule, Riobamba, and Ibbara all in Ecuador.
+
+**Histogram**
+
+Whiles exploring the transaction column, a histogram was created which revealed that the total transaction reach peak of $ 140000 against 8000 transactions. This clearly indicates increase in sales of corporation favorita products.
+
+## ❓ Questions Answered by the Time Series Regression Analysis
+As part of the regression analysis, question were raised to achieve the objective of the analysis. Below are the queston 
+
+-  **Is the train dataset complete (has all the required dates)?**
+
+Findings of the analysis revealed that the datasets were complete and had all required dates
+
+-  **Which dates have the lowest and highest sales for each year?**
+
+The analysis revealed that 2013 had the lowest dale of the year whiles 2016 had the highest peak of sales amongs all the dates.
+
+- **What analysis can we get from the date and its extractable features?**
+
+For the date to aid in getting extratable features from the analysis, it was revealed that 
+
+1. *With sales by year, **2016** recieved the highest sales*
+2. *In comparing monthly sales, July received the highest sales* **followed by January, February and December**
+3. *Also, in dividing the year by quarter sales, the second quarter of the year received the highest sales respectively*.
+
+-  **What is the relationship between oil prices and sales?**
+
+A scatter plot was created to visualize the relationship between oil prices against the sales columns to better the total sales made despite the amount of the price sold
+
+- **What is the relationship between product and sales?**
+
+The grocery product family was highly demanded following by bevearages and produce products.
+
+- **vWhat is the trend of sales overtime**
+
+In finding sales of time, it was identified that 2015, 2016, and 2017 recorded the highest sales among all other years in corporation favorita sales.
+
+## 👋👋 Machine Learning and Modeling
+
+At this part of the project, 4 models were trained and validated. These are linear regression model, decision tree, XGBoost, and random forest regression model. Of these three, the decision tree had a good RMSLE and so was chosen as the model to predict sales for the training data. The RMSLE score was used for model selection because it produces minimal error.
+
+**Evaluation Results for XGBoost:**
+- MSE: 0.4
+- RMSE: 0.63
+- RMSLE: 0.2
+
+⭕ *In comparing evaluation results of my model selection on 'Linear Regression', 'Decision Tree', 'XGBoost', and 'Random Forest'. The below results were obtained.*
+
+Comparison Table of Evaluation Results:
+
+                **Model   MSE  RMSE  RMSLE**
+     - 0  Linear Regression  0.72  0.85   0.26
+-      1      Decision Tree  0.59  0.77   0.24
+       - 2      XGBoost  0.40  0.63   0.20
+-      3      Random Forest  0.44  0.66   0.21
+
+## 😍 Summary 
+Lastly, in building machine learning model to forecast future sales of corporation favorita products, the encoded data was visualized with a subplot revealed that many quantities of dcoilwtico were sold between 2016 and 2017 across all cities in Ecuador.
+
+## 💻💻 Medium Article
+https://medium.com/@richmensah1997/time-series-regression-analysis-on-corporation-favorita-sales-prediction-using-machine-learning-c55d56f5e51a
+
+
+## 💻💻 LinkedIn
+https://www.linkedin.com/in/richard-mensah-ab8564190/ 
+
+
+## Arthur
+
+**Richard Mensah**
