@@ -185,6 +185,6 @@ https://medium.com/@richmensah1997/time-series-regression-analysis-on-corporatio
 https://www.linkedin.com/in/richard-mensah-ab8564190/ 
 
 
-## Arthur
+## Author 
 
 **Richard Mensah**
